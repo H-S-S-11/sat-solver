@@ -148,6 +148,7 @@ def sat_dp_conflict(solutions, original, propagated, assignments, literals):
   
   if func_sat:
     solutions.append(assignments)
+    print("SAT")
     return solutions
   
   # Pick an unassigned literal

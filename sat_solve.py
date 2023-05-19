@@ -1,9 +1,14 @@
 from sat_solvers import *
+import sys
 
 clauses = []
 literals = []
 
-with open('example_clauses.txt', 'r') as f:
+infile = 'example_clauses.txt'
+if len(sys.argv) > 1:
+  infile = sys.argv[1]
+
+with open(infile, 'r') as f:
   for line in f:
     clause = []
     for lit in line.strip().split('+'):
